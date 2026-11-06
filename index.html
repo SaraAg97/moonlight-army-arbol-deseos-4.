@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#211044">
+  <title>MOONLIGHT ARMY · Árbol de los deseos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="snow" aria-hidden="true"></div>
+  <header class="topbar">
+    <div class="moon">☾</div>
+    <div>
+      <p class="eyebrow">UNA NAVIDAD · UNA FAMILIA</p>
+      <h1>MOONLIGHT <span>ARMY</span></h1>
+    </div>
+    <div class="top-star">✦</div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div class="tag">💜 BTS · ARMY · NAVIDAD ✨</div>
+      <h2>Nuestro árbol<br><em>de los deseos</em></h2>
+      <p>Un lugar para compartir ilusiones, sueños y pequeños deseos. Cada esfera guarda un pedacito de nuestra familia Moonlight ARMY.</p>
+      <div class="intro-flourish">✧　❄　✧　💜　✧</div>
+    </section>
+
+    <section class="tree-section" aria-label="Árbol de los deseos">
+      <div class="tree-glow"></div>
+      <div class="tree-wrap">
+        <div class="tree-star">★</div>
+        <div class="tree">
+          <div class="tree-layer layer-one"></div>
+          <div class="tree-layer layer-two"></div>
+          <div class="tree-layer layer-three"></div>
+          <div class="tree-trunk"></div>
+          <div class="ornament o1">✦</div>
+          <div class="ornament o2">♡</div>
+          <div class="ornament o3">✧</div>
+          <div class="ornament o4">♡</div>
+          <div class="ornament o5">✦</div>
+          <div class="ornament o6">✧</div>
+          <div class="ornament o7">♡</div>
+          <div class="ornament o8">✦</div>
+          <div class="ornament o9">✧</div>
+        </div>
+      </div>
+      <div class="tree-caption"><span>✦</span> Cada deseo ilumina nuestro árbol <span>✦</span></div>
+      <div class="stats"><strong id="wishCount">0</strong><span>deseos compartidos</span></div>
+    </section>
+
+    <section class="wish-panel">
+      <div class="panel-heading">
+        <span class="mini-icon">💌</span>
+        <div><h3>Deja tu deseo</h3><p>¡Este árbol también tiene un espacio para ti!</p></div>
+      </div>
+      <form id="wishForm">
+        <label for="girlName">Tu nombre ARMY</label>
+        <input id="girlName" name="name" maxlength="35" placeholder="¿Cómo te llamamos?" required>
+        <label for="wishText">Mi deseo para esta Navidad</label>
+        <textarea id="wishText" name="wish" rows="3" maxlength="240" placeholder="Escribe aquí ese deseo que quieres compartir..." required></textarea>
+        <div class="form-foot"><small>Máximo 240 caracteres 💜</small><button type="submit">Colocar mi deseo <span>✧</span></button></div>
+        <p id="formMessage" class="form-message" role="status"></p>
+      </form>
+    </section>
+
+    <section class="wishes-section">
+      <div class="section-title"><span>✧</span><div><p class="eyebrow">NUESTRA FAMILIA</p><h3>Deseos que brillan</h3></div><span>✧</span></div>
+      <p class="wishes-note">Toca una esfera para leer el deseo completo.</p>
+      <div id="wishesGrid" class="wishes-grid">
+        <div class="empty-state">Todavía no hay deseos. ¡Sé la primera en encender una esfera! 💜</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-moon">☾</div>
+    <p>Hecho con mucho amor para <strong>MOONLIGHT ARMY</strong></p>
+    <small>Que nunca nos falten motivos para soñar. 💜</small>
+  </footer>
+
+  <dialog id="wishDialog">
+    <button class="dialog-close" id="closeDialog" aria-label="Cerrar">×</button>
+    <div class="dialog-star">✦</div>
+    <p class="dialog-label">UN DESEO DE MOONLIGHT ARMY</p>
+    <h3 id="dialogName"></h3>
+    <p id="dialogWish"></p>
+    <div class="dialog-heart">♡</div>
+  </dialog>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
